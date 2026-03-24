@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div style="padding:40px; text-align:center;">
+
+<h1 style="font-size:40px; margin-bottom:40px;">Available Courses</h1>
+
+<div style="display:grid; grid-template-columns:repeat(5,1fr); gap:25px;">
+
+{% for course in courses %}
+
+<div style="background:rgba(255,255,255,0.2); padding:25px; border-radius:12px;">
+
+<h3>{{ course.name }}</h3>
+
+<div style="margin-top:15px; display:flex; flex-direction:column; align-items:center; gap:10px;">
+
+<a href="{{ course.youtube }}" target="_blank"
+style="background:white; color:black; padding:8px 20px; border-radius:8px; text-decoration:none; font-weight:bold;">
+YouTube
+</a>
+
+<a href="{{ course.website }}" target="_blank"
+style="background:white; color:black; padding:8px 20px; border-radius:8px; text-decoration:none; font-weight:bold;">
+Website
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}

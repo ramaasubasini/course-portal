@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Edit Profile{% endblock %}
+{% block content %}
+<div class="form-container fade-in">
+  <h2>Edit Profile</h2>
+  <form method="POST">
+    <input type="text" name="first_name" value="{{ user.first_name }}" required>
+    <input type="text" name="last_name" value="{{ user.last_name }}" required>
+    <input type="email" name="email" value="{{ user.email }}" required>
+    <input type="text" name="profession" value="{{ user.profession }}" required>
+    <button type="submit">Save Changes</button>
+  </form>
+</div>
+{% endblock %}
